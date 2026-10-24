@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');*{box-sizing:border-box}body{margin:0;background:#f2edf7;color:#271d32;font:14px Inter,Arial}.top{height:64px;background:#fff;border-bottom:1px solid #dfd1eb;display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:5}.top b{display:block;color:#572780;font-size:12px;letter-spacing:1px}.top small{display:block;color:#81758b;font-size:10px;margin-top:4px}.top button,button{border:1px solid #dfd1eb;background:#fff;color:#71349b;border-radius:8px;padding:10px 13px;font-weight:700;cursor:pointer}.layout{display:grid;grid-template-columns:minmax(340px,440px) 1fr;min-height:calc(100vh - 64px)}aside{background:white;padding:22px 25px;border-right:1px solid #dfd1eb;max-height:calc(100vh - 64px);overflow:auto}h1{font-size:23px;margin:0 0 5px}section{padding:20px 0;border-bottom:1px dashed #dfd1eb}h2{font-size:12px;letter-spacing:1px;color:#7c3db6;margin:0 0 16px}h2 small{float:right;color:#8e8297;font-size:10px;letter-spacing:0}label{display:block;font-size:12px;font-weight:700;color:#5c5266;margin:0 0 13px}input,textarea,select{display:block;width:100%;margin-top:7px;border:1.5px solid #dfd1eb;background:#fbf9fd;border-radius:9px;padding:12px;color:#271d32;font:13px Inter;outline:none;min-width:0}input:focus,textarea:focus,select:focus{border-color:#7c3db6}textarea{resize:vertical;min-height:70px}.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.two label{min-width:0}.itemrow{display:grid;grid-template-columns:minmax(0,1fr) 100px 34px;gap:7px;margin-bottom:8px}.itemrow input{margin:0;padding:11px 9px}.itemrow button{border:0;background:#fbe7e7;color:#bd3434;padding:0;font-size:20px}.wide{width:100%;margin:5px 0}.outline{border:1px dashed #7c3db6;color:#7c3db6}.primary{background:linear-gradient(120deg,#8541bd,#5e2a83);color:white;border:0;padding:14px;box-shadow:0 6px 17px #71349b2a}.dark{background:#271d32;color:white;border:0;padding:14px}.terms{min-height:120px;line-height:1.6}.credit{text-align:center;color:#93859d;font-size:10px}article{padding:26px clamp(14px,3vw,40px);min-width:0}.previewbar{display:flex;align-items:center;justify-content:space-between;max-width:980px;margin:0 auto 17px}.previewbar small{color:#7c3db6;font-weight:800;letter-spacing:2px;font-size:10px}.previewbar h2{font-size:20px;margin:6px 0}.paper{background:white;max-width:980px;margin:auto;padding:30px;border:1px solid #e4d9ec;box-shadow:0 15px 50px #44215b18;color:#12366e}
+
+
+/* ===== NAUSHAD AC SOLUTION - INVOICE HEADER ===== */
+
+.billhead {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr) 170px;
+  grid-template-areas: "tagline brand phone";
+  align-items: start;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 0 0px;
+  background: #fff;
+  color: #0b2f70;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.billhead .tagline {
+  grid-area: tagline;
+  align-self: start;
+  padding-top: 10px;
+  color: #102f70;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(12px, 1.35vw, 18px);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  transform: rotate(-5deg);
+}
+
+.billhead .brand {
+  grid-area: brand;
+  min-width: 0;
+  text-align: center;
+}
+
+.billhead .brand h1 {
+  margin: 0;
+  padding: 0;
+  color: #0b2f70;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(36px, 5.1vw, 66px);
+  font-weight: bold;
+  line-height: 1.05;
+  letter-spacing: 1.5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.billhead .ribbon {
+  width: min(100%, 475px);
+  box-sizing: border-box;
+  margin: 5px auto 0;
+  padding: 5px 10px;
+  border-radius: 35px;
+  background: #d7192d;
+  color: #fff;
+  font-size: clamp(19px, 2.5vw, 34px);
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.billhead .service {
+  margin: 10px 0 0;
+  color: #0b2f70;
+  font-size: clamp(11px, 1.45vw, 19px);
+  font-weight: bold;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.billhead .phone {
+  grid-area: phone;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 8px;
+  padding: 9px 8px;
+  border-radius: 8px;
+  background: #103a8a;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.25;
+  white-space: nowrap;
+  position: static;
+}
+
+.billhead 
+.whatsapp-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  object-fit: contain;
+}
+
+
+.billhead .phone-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.billhead .phone-text span {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.billhead .phone-text strong {
+  color: #fff;
+  font-size: clamp(12px, 1.15vw, 15px);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* Tablet and mobile */
+@media screen and (max-width: 600px) {
+  .billhead {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "tagline phone"
+      "brand brand";
+    gap: 8px;
+    padding: 4px 0 10px;
+  }
+
+  .billhead .tagline {
+    padding-top: 4px;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .billhead .brand h1 {
+    font-size: clamp(34px, 10vw, 52px);
+    letter-spacing: 1px;
+  }
+
+  .billhead .ribbon {
+    width: min(88%, 380px);
+    margin-top: 4px;
+    padding: 5px 8px;
+    font-size: clamp(19px, 6vw, 28px);
+  }
+
+  .billhead .service {
+    margin-top: 8px;
+    font-size: clamp(11px, 3.3vw, 15px);
+  }
+
+  .billhead .phone {
+    width: auto;
+    margin-top: 0;
+    padding: 7px;
+  }
+
+  .billhead .whatsapp-icon {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+  }
+}
+
+/* A4 print/PDF layout: preserve the desktop header */
+@media print {
+  .billhead {
+    grid-template-columns: 145px minmax(0, 1fr) 170px !important;
+    grid-template-areas: "tagline brand phone" !important;
+    gap: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .billhead .brand h1 {
+    font-size: 48px;
+  }
+
+  .billhead .ribbon {
+    font-size: 27px;
+  }
+
+  .billhead .service {
+    font-size: 15px;
+  }
+
+  .billhead .tagline {
+    font-size: 15px;
+  }
+}
+
+
+.ribbon{background:#d7192d;color:white;border-radius:30px;text-align:center;font-size:clamp(18px,2.5vw,30px);font-weight:900;padding:4px ; justify-items: center; position: relative; text-align: center; margin: 0 auto; width: 50%;}
+
+.phone{background:#103a8a;color:white;padding:8px;border-radius:7px;font-size:10px;white-space:nowrap ; top:-20px; position: relative;}
+
+.phone b{font-size:14px}
+
+.service{text-align:center;font-weight:900;font-size:clamp(12px,1.5vw,18px);margin:8px 0;color:#0b2f70}
+
+.appliance{width:100%;max-height:280px;object-fit:contain;display:block}
+
+.banner{background:#0c347b;color:white;text-align:center;padding:9px;border-radius:6px;font-size:clamp(10px,1.2vw,130px);font-weight:600;line-height:1.6}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid #8aa5c8;
+  margin: 8px 0;
+  padding: 8px 0;
+  background: #f7fbff;
+  color: #173d78;
+  font-family: Arial, sans-serif;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 4px 8px;
+  min-width: 0;
+}
+
+.feature:not(:last-child) {
+  border-right: 1px solid #8aa5c8;
+}
+
+.feature svg {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  fill: none;
+  stroke: #173d78;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature span {
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: center;
+}
+
+.software-credit {
+  text-align: center;
+  color: #81738c;
+  font-size: 10px;
+  margin-top: 12px;
+}
+
+@media (max-width: 480px) {
+  .feature {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 2px;
+  }
+
+  .feature svg {
+    width: 27px;
+    height: 27px;
+    flex-basis: 27px;
+  }
+
+  .feature span {
+    font-size: 9px;
+  }
+}
+
+@media print {
+  .features {
+    break-inside: avoid;
+  }
+}
+
+.features div{text-align:center;border-right:1px solid #a3b4cc;font-size:10px;font-weight:700;padding:3px}.features div:last-child{border:0}.billtitle{display:flex;justify-content:space-between;align-items:center;background:#d9ebf8;padding:5px 9px;margin:9px 0;border-radius:5px}.billtitle h2{font-size:24px;margin:0;color:#173b74}.billtitle b{border:1px solid #173d79;background:white;padding:5px;border-radius:5px}.cust{font-size:11px;line-height:1.9}.cust div{border-bottom:1px dotted #8297b4;min-height:20px;overflow-wrap:anywhere}.billitems{width:100%;border-collapse:collapse;table-layout:fixed;font-size:10px;margin-top:8px}.billitems th,.billitems td{border:1px solid #6b8bb4;padding:5px;overflow-wrap:anywhere}.billitems th{background:#d8eafa}.billitems th:nth-child(1){width:7%}.billitems th:nth-child(2){width:45%}.billitems th:nth-child(3){width:14%}.billitems th:nth-child(4),.billitems th:nth-child(5){width:17%}.billitems td:nth-child(n+3){text-align:right}.bottom{display:grid;grid-template-columns:1fr 38%;gap:10px;margin-top:8px;font-size:10px}.totals{width:100%;border-collapse:collapse}.totals td,.totals th{border:1px solid #7797bd;padding:6px}.totals th{background:#d9eafa;text-align:left}.totals td{text-align:right}.totals .final th,.totals .final td{background:#0c438f;color:white;font-weight:900}.bank{border:1px solid #9eb3d0;padding:7px;margin-top:8px;font-size:10px;line-height:1.6;overflow-wrap:anywhere}.billfoot{display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:10px;align-items:end;margin-top:12px;break-inside:avoid}.termsprint h3{background:#0d438b;color:white;display:inline-block;padding:5px;margin:0 0 5px;font-size:10px}.termsprint p{white-space:pre-line;font-size:8px;line-height:1.5;margin:0}.thanks{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:15px}.sign{border-left:1px solid #173b71;text-align:center;padding:8px 0 0 8px;min-height:65px;font-size:10px;display:flex;flex-direction:column;justify-content:space-between}.sign span{border-top:1px solid #173b71;padding-top:5px;margin-top:15px}.software{text-align:center;font-size:9px;margin-top:12px;color:#596781}.drawer{position:fixed;z-index:20;right:15px;top:78px;bottom:15px;width:min(440px,calc(100vw - 30px));background:#fff;border:1px solid #dfd1eb;border-radius:14px;box-shadow:0 20px 80px #21112e35;padding:18px;overflow:auto}.hidden{display:none!important}.drawhead{display:flex;justify-content:space-between;align-items:center}.drawhead h2{font-size:20px}.record{border:1px solid #eadff1;border-radius:9px;padding:12px;margin:9px 0}.record strong{font-size:12px}.record small{display:block;color:#8b8194;margin:5px 0}.record .ops{display:flex;gap:6px;flex-wrap:wrap}.record button{font-size:10px;padding:7px}.edited{color:#996500;font-size:10px}.toast{position:fixed;z-index:40;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#241b2d;color:white;padding:12px 17px;border-radius:9px;transition:.2s;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}.modal{position:fixed;inset:0;z-index:50;background:#1b1027a6;display:grid;place-items:center;padding:20px}.modal>div{background:#fff;border-radius:15px;padding:24px;width:min(370px,100%)}.modal p{color:#6b6175;line-height:1.6}.modal button{margin-right:6px}
+@media(max-width:800px){.layout{display:flex;flex-direction:column}aside{max-height:none;overflow:visible;padding:18px 16px;border-right:0;border-bottom:1px solid #dfd1eb}.top{padding:0 12px}.top b{font-size:10px}.top button{font-size:10px;padding:9px}.top #db{font-size:9px}.paper{padding:15px 10px}.billhead h1{font-size:clamp(25px,7vw,40px)}
+
+.ribbon{font-size:clamp(14px,4vw,23px)}
+
+.phone{font-size:8px;padding:5px}.phone b{font-size:10px}.appliance{max-height:none}.features div{font-size:7px;padding:2px}.billtitle h2{font-size:17px}.billtitle b{font-size:9px}.cust{font-size:9px}.billitems{font-size:8px}.billitems th,.billitems td{padding:3px 2px}.bottom{grid-template-columns:1fr 42%;gap:5px;font-size:8px}.totals td,.totals th{padding:4px 3px}.bank{font-size:8px;padding:5px}.billfoot{gap:4px}.termsprint h3{font-size:7px;padding:3px}.termsprint p{font-size:6px}.thanks{font-size:11px}.sign{font-size:7px;padding-left:4px}.previewbar h2{font-size:16px}.previewbar button{font-size:10px;padding:9px}.two{gap:8px}.itemrow{grid-template-columns:minmax(0,1fr) 85px 32px}}
+
+
+
+/* Keep invoice preview proportions in the downloaded PDF */
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: 210mm !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .top,
+  aside,
+  .previewbar,
+  .credit,
+  .drawer,
+  .toast,
+  .modal {
+    display: none !important;
+  }
+
+  .layout {
+    display: block !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  article {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .paper {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 210mm !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 9mm !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    transform: none !important;
+  }
+
+  /* Appliance and brand image: use the available invoice width */
+  .appliance {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Preserve the banner's preview styling */
+  .banner {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    background: #12377d !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .billhead,
+  .features,
+  .billtitle,
+  .cust,
+  .billitems,
+  .bottom,
+  .bank,
+  .billfoot {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .billitems {
+    width: 100% !important;
+    font-size: 8pt !important;
+    border-collapse: collapse !important;
+  }
+
+  .billitems th,
+  .billitems td {
+    padding: 5px !important;
+  }
+
+  .cust {
+    font-size: 9pt !important;
+  }
+
+  .termsprint p {
+    font-size: 7pt !important;
+  }
+
+  img,
+  svg {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
